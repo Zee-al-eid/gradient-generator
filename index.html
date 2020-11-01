@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="full">
+    <h1>Gradient Generator</h1>
+    <div id="input-wrap">
+    <input value="#01208b" type="color" name="color1" id="color1">
+    <input value="#6f0026" type="color" name="color2" id="color2">
+</div>
+<div id=rangewrap>
+    <label for="range2">Color 1</label>
+<input type="range" id="range1" name="range1">
+<label for="range2">Color 2</label>
+<input type="range" id="range2" name="range2"></div>
+<div class="btn">
+<input id="button" type="button" value="Generate">
+</div>
+<h2>Current CSS</h2>
+<h3 id="css">linear-gradient(to right, #01208b 0%, #6f0026 100%)</h3>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body{
+    background: linear-gradient(to right, #01208b 0%, #6f0026 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto 0;
+}
+h1, h2{
+    text-align: center;
+    font-size: 3em;
+    color: black;
+    font-family: cursive;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+     padding: 0;
+     margin: 0;
+     margin-top: 15px;
+     animation: colorchange 1s infinite;
+}
+@keyframes colorchange {
+    0% {
+      color:#F725A0;
+    }
+    25% {
+        color:#0CB2C0 ;
+      }
+    50% {
+        color:  #FAD141;
+      }
+    75% {
+        color: #E8E6D9;
+      }
+    100% {
+      color:#00FF00 ;
+    }
+  }
+
+#input-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+} 
+input{
+    margin: 5px;
+}
+h2{
+    font-size: 2em;
+}
+
+h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 100px;
+	height: 35px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+#button{
+    color: black;
+    font-weight: 600;
+    background-color: black;
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: cursive;
+    font-size: 1.5em;
+    animation: backcolorchange 1s infinite;
+}
+@keyframes backcolorchange {
+    25% {
+      background-color:#F725A0;
+    }
+    0% {
+        background-color:#0CB2C0 ;
+      }
+    70% {
+        background-color:  #FAD141;
+      }
+    100% {
+        background-color: #E8E6D9;
+      }
+    50% {
+      background-color:#00FF00 ;
+    }
+  }
+#button:hover{
+    color: white;
+    background-color: rgba(20, 19, 19, 0.911);
+    border: white solid 2px;
+    animation: none;
+}
+
+#button:active{
+    color: white;
+    background-color: rgb(212, 29, 29);
+    border: black solid 2px;
+    
+}
+
+#rangewrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="range"]{
+    width: 200px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.3em;
+    -webkit-text-stroke: 1.1px black;
+    text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+    }
