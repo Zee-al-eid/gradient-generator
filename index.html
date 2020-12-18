@@ -5,24 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
+
 <body id="full">
     <h1>Gradient Generator</h1>
     <div id="input-wrap">
-    <input value="#01208b" type="color" name="color1" id="color1">
-    <input value="#6f0026" type="color" name="color2" id="color2">
+        <input value="#01208b" type="color" name="color1" id="color1">
+        <input value="#6f0026" type="color" name="color2" id="color2">
+    </div>
+
+
+<div class="direction-wrap">
+    <input type="radio" name="directions" value="linear-gradient(to left" id="left" checked="">
+    <label for="left" class="direction"><img class="l" src="./down-arrow.png"></label>
+
+    <input type="radio" name="directions" value="linear-gradient(to left bottom" id="left-bottom" checked="">
+    <label for="left-bottom" class="direction"><img class="lb" src="./down-arrow.png"></label>
+
+    <input type="radio" name="directions" value="linear-gradient(to left top" id="left-top" checked="">
+    <label for="left-top" class="direction"><img class="lt" src="./down-arrow.png"></label><br>
+
+    <input type="radio" name="directions" value="linear-gradient(to top" id="top" checked="">
+    <label for="top" class="direction"><img class="t" src="./down-arrow.png"></label><br>
+
+    <input type="radio" name="directions" value="radial-gradient(circle" id="radial" checked="">
+    <label for="radial" class="direction"><img class="rd" src="./radial.png"></label>
+
+    <input type="radio" name="directions" value="linear-gradient(to bottom" id="bottom" checked="">
+    <label for="bottom" class="direction"><img class="b" src="./down-arrow.png"></i></label>
+
+    <input type="radio" name="directions" value="linear-gradient(to right top" id="right-top" checked="">
+    <label for="right-top" class="direction"><img class="rt" src="./down-arrow.png"></label><br>
+
+    <input type="radio" name="directions" value="linear-gradient(to right bottom" id="right-bottom" checked="">
+    <label for="right-bottom" class="direction"><img class="rb" src="./down-arrow.png"></label><br>
+
+    <input type="radio" name="directions" value="linear-gradient(to right" id="right" checked="true">
+    <label for="right" class="direction"><img class="r" src="./down-arrow.png"></label><br>
 </div>
+
+
 <div id=rangewrap>
     <label for="range2">Color 1</label>
-<input type="range" id="range1" name="range1">
-<label for="range2">Color 2</label>
-<input type="range" id="range2" name="range2"></div>
-<div class="btn">
-<input id="button" type="button" value="Generate">
+    <input type="range" id="range1" name="range1" value="0">
+    <label for="range2">Color 2</label>
+    <input type="range" id="range2" name="range2" value="100">
 </div>
-<h2>Current CSS</h2>
-<h3 id="css">linear-gradient(to right, #01208b 0%, #6f0026 100%)</h3>
 
+<h2>CSS</h2>
+<h3 id="css">background: linear-gradient(to right, #01208b 0%, #6f0026 100%)</h3>
+<div class="btn ">
+	<div class="tooltip">
+        <input id="button" type="button" value="Copy" onclick="copyToClipboard('#css')">	
+        <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
